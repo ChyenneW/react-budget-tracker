@@ -2,8 +2,8 @@ import React from "react";
 
 const Remaining = () => {
     return (
-        <div>
-            <span className="alert alert-success">
+        <div className="alert alert-success">
+            <span>
                 Remaining: $1000
             </span>
         </div>

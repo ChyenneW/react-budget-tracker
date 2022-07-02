@@ -3,7 +3,7 @@ import React from "react";
 const Remaining = () => {
     return (
         <div>
-            <span>
+            <span className="alert alert-success">
                 Remaining: $1000
             </span>
         </div>

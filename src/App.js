@@ -7,16 +7,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div>
-      <h1>My Budget Planner</h1>
-      <div>
-        <div>
+    <div className='container'>
+      <h1 className='mt-3'>My Budget Planner</h1>
+      <div className='row mt-3'>
+        <div className='col-sm'>
           <Budget />
         </div>
-        <div>
+        <div className='col-sm'>
           <Remaining />
         </div>
-        <div>
+        <div className='col-sm'>
           <ExpenseTotal />
         </div>
       </div>

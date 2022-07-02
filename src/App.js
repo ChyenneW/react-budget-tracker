@@ -1,9 +1,26 @@
 import React from 'react';
+import Budget from './components/Budget';
+import Remaining from './components/Remaining';
+import ExpenseTotal from './components/ExpenseTotal';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
-    <p>Hello React!</p>
+    <div>
+      <h1>My Budget Planner</h1>
+      <div>
+        <div>
+          <Budget />
+        </div>
+        <div>
+          <Remaining />
+        </div>
+        <div>
+          <ExpenseTotal />
+        </div>
+      </div>
+    </div>
   );
 }
 

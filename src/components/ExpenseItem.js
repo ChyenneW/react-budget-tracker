@@ -3,9 +3,9 @@ import { TiDelete } from "react-icons/ti";
 
 const ExpenseItem = (props) => {
     return (
-        <li>
+        <li className='list-group-item d-flex justify-content-between align-items-center'>
             {props.name}
-            <div className='list-group-item d-flex justify-content-between align-items-center'>
+            <div>
                 <span className='badge badge-primary badge-pill mr-3'>
                     ${props.cost}
                 </span>

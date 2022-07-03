@@ -1,10 +1,17 @@
 import React from "react";
+import { TiDelete } from "react-icons/ti";
 
-const ExpenseItem = () => {
+const ExpenseItem = (props) => {
     return (
-        <div>
-            <p>Hi</p>
-        </div>
+        <li>
+            {props.name}
+            <div>
+                <span>
+                    ${props.cost}
+                </span>
+                <TiDelete size="1.5em"></TiDelete>
+            </div>
+        </li>
     );
 }
 

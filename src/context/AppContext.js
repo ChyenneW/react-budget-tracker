@@ -6,3 +6,5 @@ const initialState = {
         { id: 14, name: 'car service', cost: 50 },
     ],
 };
+
+export const AppContext = createContext();

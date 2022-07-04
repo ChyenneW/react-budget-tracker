@@ -7,18 +7,18 @@ const Budget = () => {
     const { budget } = useContext(AppContext);
     const { dispatch } = useContext(AppContext);
 
-    const [allowEdit, setEditable] = useState("false");
+    const [allowEdit, setEditable] = useState(false);
     const [newBudget, setNewBudget] = useState('');
 
     const submitNewBudget = (event) => {
         event.preventDefault();
 
-        const budget = parseInt(newBudget);
-
         dispatch({
             type: 'UPDATE_BUDGET',
-            payload: budget,
+            payload: newBudget,
         });
+
+        setEditable(false);
     };
 
     const handleBudgetEdit = () => {

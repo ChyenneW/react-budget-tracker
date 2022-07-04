@@ -6,6 +6,7 @@ import { FiEdit } from 'react-icons/fi';
 const Budget = () => {
     const { budget } = useContext(AppContext);
     const [allowEdit, setEditable] = useState("false");
+    const [newBudget, setNewBudget] = useState('');
 
     const handleBudgetEdit = () => {
         setEditable(!allowEdit);
@@ -20,7 +21,9 @@ const Budget = () => {
             <form className={allowEdit ? "d-flex" : "d-none"}>
                 <div className="row">
                     <div className="col-sm">
-                        <input type="text" className="form-control" id="budget"></input>
+                        <input type="text" className="form-control" id="budget"
+                            onChange={(event) => setNewBudget(event.target.value)}
+                        ></input>
                     </div>
                     <div className="col-sm">
                         <button type="submit" className="btn btn-primary">Save</button>

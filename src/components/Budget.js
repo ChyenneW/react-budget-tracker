@@ -9,6 +9,6 @@ const Budget = () => {
             <span>Budget: ${budget}</span>
         </div>
     );
-}
+};
 
 export default Budget;

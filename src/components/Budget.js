@@ -12,10 +12,21 @@ const Budget = () => {
     };
 
     return (
-        <div className="alert alert-secondary d-flex justify-content-between align-items-center">
-            <span>Budget: ${budget}</span>
-            <textarea className={allowEdit ? "d-flex" : "d-none"}></textarea>
-            <FiEdit size="1.5em" onClick={handleBudgetEdit}></FiEdit>
+        <div>
+            <div className="alert alert-secondary d-flex justify-content-between align-items-center">
+                <span>Budget: ${budget}</span>
+                <FiEdit size="1.5em" onClick={handleBudgetEdit}></FiEdit>
+            </div>
+            <form className={allowEdit ? "d-flex" : "d-none"}>
+                <div className="row">
+                    <div className="col-sm">
+                        <input type="text" className="form-control" id="budget"></input>
+                    </div>
+                    <div className="col-sm">
+                        <button type="submit" className="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </form>
         </div>
     );
 };

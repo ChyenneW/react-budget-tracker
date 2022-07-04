@@ -1,4 +1,5 @@
 import { useReducer } from "react";
+import { createContext } from "react";
 
 const AppReducer = (state, action) => {
     switch (action.type) {
@@ -18,7 +19,7 @@ const initialState = {
 
 export const AppContext = createContext();
 
-const AppProvider = (props) => {
+export const AppProvider = (props) => {
     const [state, dispatch] = useReducer(AppReducer, initialState);
 
     return (

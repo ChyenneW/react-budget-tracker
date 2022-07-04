@@ -24,7 +24,7 @@ export const AppProvider = (props) => {
 
     return (
         <AppContext.Provider value={{ budget: state.budget, expenses: state.expenses, dispatch }}>
-            {props.cildren}
+            {props.children}
         </AppContext.Provider>
     );
 };

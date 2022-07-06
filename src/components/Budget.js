@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState } from "react";
 import { AppContext } from "../context/AppContext";
 import { FiEdit } from 'react-icons/fi';
 
@@ -8,17 +8,6 @@ const Budget = () => {
 
     const [allowEdit, setEditable] = useState(false);
     const [newBudget, setNewBudget] = useState('');
-
-    useEffect(() => {
-        localStorage.setItem('newBudget', JSON.stringify(newBudget));
-    }, [newBudget]);
-
-    useEffect(() => {
-        const newBudget = JSON.parse(localStorage.getItem('newBudget'));
-        if (newBudget) {
-            setNewBudget(newBudget);
-        }
-    }, []);
 
 
     const submitNewBudget = (event) => {
